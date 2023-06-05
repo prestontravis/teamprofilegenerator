@@ -14,7 +14,7 @@ A website that generates a webpage that displays my team's basic info so that I 
 * [Additional Info](#additional-info)
 
 ## Installation
-Clone the repository locally and run "npm i" to install the necessary dependencies.
+Clone the repository locally and run "npm i inquirer@8.2.4" to install the necessary dependencies.
 
 ## License
     This application is covered by the MIT license.
