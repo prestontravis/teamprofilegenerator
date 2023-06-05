@@ -25,7 +25,7 @@ Make sure to install the necessary dependencies, which include jest, then simply
 [Video Walkthrough](www.videowalkthroughcomingsoon.com/)
 
 ## GitHub Repository
-[Team Profile Generator](www.github.com/prestontravis/teamprofilegenerator)
+[Team Profile Generator](https://github.com/prestontravis/teamprofilegenerator)
 
 ## Deployed Application
 [Deployed Application Link](https://prestontravis.github.io/teamprofilegenerator/)
