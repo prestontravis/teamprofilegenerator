@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Team Roster</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    .card {
+      margin-bottom: 20px;
+    }
+
+    .card-header {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .card-footer {
+      background-color: #f8f9fa;
+    }
+
+    .card-footer a {
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Team Roster</h1>
+    <div class="row" id="team-roster">
+      <!-- Team members will be dynamically added here -->
+    </div>
+  </div>
+
+  <script>
+    // JavaScript code to handle user input and generate the team roster
+
+    // Sample team member objects
+    var teamMembers = [];
+
+    function addManager(name, id, email, officeNumber) {
+      var manager = {
+        name: name,
+        id: id,
+        email: email,
+        officeNumber: officeNumber,
+        role: "Manager"
+      };
+      teamMembers.push(manager);
+    }
+
+    function addEngineer(name, id, email, github) {
+      var engineer = {
+        name: name,
+        id: id,
+        email: email,
+        github: github,
+        role: "Engineer"
+      };
+      teamMembers.push(engineer);
+    }
+
+    function addIntern(name, id, email, school) {
+      var intern = {
+        name: name,
+        id: id,
+        email: email,
+        school: school,
+        role: "Intern"
+      };
+      teamMembers.push(intern);
+    }
+
+    // Function to generate the HTML for the team roster
+    function generateTeamRoster() {
+      var rosterHTML = "";
+      for (var i = 0; i < teamMembers.length; i++) {
+        var member = teamMembers[i];
+        rosterHTML += `
+          <div class="col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title text-center text-white">${member.name}</h5>
+              </div>
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2">${member.role}</h6>
+                <p class="card-text">ID: ${member.id}</p>
+                <p class="card-text">Email: <a href="mailto:${member.email}">${member.email}</a></p>
+                ${member.github ? `<p class="card-text">GitHub: <a href="https://github.com/${member.github}" target="_blank">${member.github}</a></p>` : ""}
+              </div>
+              <div class="card-footer text-center">
+                <a href="#" class="card-link">More Info</a>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+      document.getElementById("team-roster").innerHTML = rosterHTML;
+    }
+
+    // Example usage
+    addManager("John Doe", "M001", "john.doe@example.com", "123");
+    addEngineer("Jane Smith", "E001", "jane.smith@example.com", "janesmith");
+    addIntern("Michael Johnson", "I001", "michael.johnson@example.com", "ABC University");
+    generateTeamRoster();
+  </script>
+</body>
+</html>
