@@ -10,7 +10,6 @@ A website that generates a webpage that displays my team's basic info so that I 
 * [Test Instructions](#test-instructions)
 * [Video Walkthrough](#video-walkthrough)
 * [GitHub Repository](#github-repository)
-* [Deployed Application](#deployed-application)
 * [Additional Info](#additional-info)
 
 ## Installation
