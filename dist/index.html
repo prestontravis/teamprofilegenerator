@@ -69,6 +69,17 @@
       teamMembers.push(intern);
     }
 
+    function addEmployee(name, id, email, title) {
+      var employee = {
+        name: name,
+        id: id,
+        email: email,
+        title: title,
+        role: "Employee"
+      };
+      teamMembers.push(employee);
+    }
+
     // Function to generate the HTML for the team roster
     function generateTeamRoster() {
       var rosterHTML = "";
@@ -85,6 +96,7 @@
                 <p class="card-text">ID: ${member.id}</p>
                 <p class="card-text">Email: <a href="mailto:${member.email}">${member.email}</a></p>
                 ${member.github ? `<p class="card-text">GitHub: <a href="https://github.com/${member.github}" target="_blank">${member.github}</a></p>` : ""}
+                ${member.title ? `<p class="card-text">Title: ${member.title}</p>` : ""}
               </div>
               <div class="card-footer text-center">
                 <a href="#" class="card-link">More Info</a>
@@ -100,6 +112,7 @@
     addManager("John Doe", "M001", "john.doe@example.com", "123");
     addEngineer("Jane Smith", "E001", "jane.smith@example.com", "janesmith");
     addIntern("Michael Johnson", "I001", "michael.johnson@example.com", "ABC University");
+    addEmployee("Sarah Anderson", "A001", "sarah.anderson@example.com", "Designer");
     generateTeamRoster();
   </script>
 </body>
